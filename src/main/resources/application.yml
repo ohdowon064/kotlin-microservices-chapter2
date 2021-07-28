@@ -1,3 +1,22 @@
+spring:
+  profiles:
+    active: "development"
 service:
   message:
-    text: "yaml"
+    text: "hello"
+
+---
+spring:
+  profiles: "development"
+service:
+  message:
+    type: "simple"
+    text: "hi"
+
+---
+spring:
+  profiles: "production"
+service:
+  message:
+    type: "advance"
+    text: "welcome"
