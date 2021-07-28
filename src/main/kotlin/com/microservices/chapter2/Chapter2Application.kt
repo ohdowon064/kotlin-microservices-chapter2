@@ -32,7 +32,7 @@ class FirstController {
 	@ResponseBody
 	fun hello(
 		@PathVariable name: String
-	) = service.getHello("name")
+	) = service.getHello(name)
 }
 
 fun main(args: Array<String>) {
