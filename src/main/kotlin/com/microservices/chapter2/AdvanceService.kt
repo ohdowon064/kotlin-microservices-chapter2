@@ -10,6 +10,6 @@ class AdvanceService : ServiceInterface {
 
     override fun getHello(name: String): String {
         count++
-        return "$text $name $count"
+        return "$text $name ($count)"
     }
 }

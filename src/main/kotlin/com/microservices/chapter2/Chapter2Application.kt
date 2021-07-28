@@ -15,7 +15,12 @@ import org.springframework.web.bind.annotation.ResponseBody
 @SpringBootApplication
 class Chapter2Application {
 	@Bean
+	@ConditionalOnExpression("#{'\${service.message.type}'=='simple'}")
 	fun exampleService(): ServiceInterface = ExampleService()
+
+	@Bean
+	@ConditionalOnExpression("#{'\${service.message.type}'=='advance'}")
+	fun advanceService(): ServiceInterface = AdvanceService()
 }
 
 @Controller
